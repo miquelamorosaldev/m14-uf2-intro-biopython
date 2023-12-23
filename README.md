@@ -23,13 +23,19 @@ grep -E '^\S+$' sequences.fa | awk '{printf "%s ", $0; getline; print $0}'
 [exercicis_1_5_fasta.py](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/exercicis_1_5_fasta.py)
 
 Escriu un programa que llegeixi un fitxer FASTA indicat per codi:
+
 1.- Imprimeixi un fitxer FASTA nou amb el complement invers = reverse complementary de cada seqüència.
+
 2.- El contingut GC de cada seqüència.
+
 3.- Descarrega’t el fitxer .fasta de la orquidea, prova el codi i analitza els resultats.
+
 https://github.com/biopython/biopython/blob/master/Doc/examples/ls_orchid.fasta
+
 4.- Millora el programa (si encara no ho has fet) i fes que si l’usuari introdueix un fitxer fasta pel terminal 
 que imprimeixi el fasta del terminal, i si no ho ha fet, que avisi a l’usuari que la idea és que posi un fitxer fasta, 
 però en comptes de sortir del programa que llegeixi un fasta passat per codi (el secuences.fa)
+
 5.- Afegeix un mecanisme per verificar quines seqüències del fitxer FASTA només tinguin seqüències d'ADN vàlides i sense ambigüitats: 
 (validant els caràcters) i ho mostri per pantalla. 
 
