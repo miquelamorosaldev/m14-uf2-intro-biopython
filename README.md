@@ -1,8 +1,14 @@
 ## Introducció a Biopython.
 
-La teoria respecte Biopython es troba en aquest document:
+La teoria que proporcionem respecte Biopython es troba en aquest document (esborrany):
 
 https://docs.google.com/document/d/1v0BcVDdad613peyC_aMyqM0ehR33idG-AhkUf1WbU8Y/edit
+
+### Referències:
+
+- https://open.oregonstate.education/appliedbioinformatics/chapter/chapter-1/
+- https://biopython.org/
+
 
 ## Com llegir fitxers .fasta amb la shell de Linux:
 
@@ -12,7 +18,9 @@ Molt fàcil!
 grep -E '^\S+$' sequences.fa | awk '{printf "%s ", $0; getline; print $0}'
 ```
 
-## Exercicis bloc 1.
+## Exercicis bloc 1. Lectura fitxers fasta de nucleòtids.
+
+[exercicis_1_5_fasta.py](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/exercicis_1_5_fasta.py)
 
 Escriu un programa que llegeixi un fitxer FASTA indicat per codi:
 1.- Imprimeixi un fitxer FASTA nou amb el complement invers = reverse complementary de cada seqüència.
@@ -28,11 +36,25 @@ però en comptes de sortir del programa que llegeixi un fasta passat per codi (e
 <em>Observació: Tot i que ja vam veure que ens podem trobar seqüències amb caràcters com la N 
 (que indica que pot ser qualsevol àcid nucleic = qualsevol lletra) i és un caràcter vàlid en els fitxers fasta; no ens interessa tenir cadenes ambigües.</em>
 
-## Activitat 
+## Activitat. Lectura fitxers fasta d'aminoàcids.
+
+[activitat_llegir_prot.py](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/activitat_llegir_prot.py)
+
 També és molt important recordar com llegir un fitxer .fasta de nucleotids i convertir-lo a proteïna; l‘objectiu de l’activitat és fer crear el codi que converteixi adn a proteïnes. 
 Al final, aconsegueix que guardi el fitxer resultant en un altra fasta, que tingui el mateix nom excepte que els últims caràcters siguin “_newprot”.fasta
 
-## Exercici 6.
+## Exercici 6. Lectura de nucleòtids i escriptura d'aminoàcids en firxers fasta.
+
+[exercicis_6_fasta_prot.py](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/exercicis_6_fasta_prot.py)
+
 Seguint amb el pas 5 (solució de l'exercici), fes un nou programa que tradueixi un seqüència d’ADN o un ARN a una de proteïnes. 
 Al final, ha de guardar la proteïna en un altre fitxer que tingui el mateix nom juntament amb el text “_newprot”. 
 La capçalera ha de ser la mateixa que el fasta de nucleòtids, afegint el text “, translated by Biopython”.
+
+Els fitxer d'entrada que s'ha provat és:
+
+[ls_orchid.fasta](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/ls_orchid.fasta)
+
+El fitxer de sortida generat és:
+
+[ls_orchid_newprot.fasta](https://github.com/miquelamorosaldev/m14-uf2-intro-biopython/blob/main/ls_orchid_newprot.fasta)
